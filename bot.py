@@ -42,4 +42,8 @@ def command_text(m):
 def command_text(m):
 	bot.send_message(m.chat.id, "SLURP SFR NYO MEILLEUR 4G DE FRANCE OMG")
 
+@bot.message_handler(func=lambda message: "test" in message.text.lower())
+def command_text(m):
+	bot.send_message(m.chat.id, "reçu")
+
 bot.polling()
