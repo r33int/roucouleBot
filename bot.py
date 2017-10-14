@@ -50,4 +50,4 @@ def command_text(m):
 def command_text(m):
 	bot.send_message(m.chat.id, "Ouais en gros tu t'en blc...")
 
-bot.polling()
+bot.polling(none_stop=False, interval=0, timeout=20)
