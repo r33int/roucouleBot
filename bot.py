@@ -52,7 +52,7 @@ def command_text(m):
 
 @bot.message_handler(func=lambda message: "exit" in message.text.lower())
 def command_text(m):
-	video = open('issou.gif', 'rb')
-	bot.send_video(m.chat_id, video)
+
+	bot.send_video(m.chat_id, open('issou.gif', 'rb'))
 
 bot.polling(none_stop = True)
