@@ -50,7 +50,7 @@ def command_text(m):
 def command_text(m):
 	bot.send_message(m.chat.id, "Ouais en gros tu t'en blc...")
 
-@bot.message_handler(func=lambda message: "aok" in message.text.lower())
+@bot.message_handler(func=lambda message: "exit" in message.text.lower())
 def command_video(m):
 	bot.send_video(m.chat.id, open('/root/Git/roucouleBot/issou.mp4', 'rb'))
 
