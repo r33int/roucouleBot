@@ -52,6 +52,6 @@ def command_text(m):
 
 @bot.message_handler(func=lambda message: "aok" in message.text.lower())
 def command_video(m):
-	bot.send_video(m.chat.id, open('/root/Git/roucouleBot/issou.gif', 'rb'))
+	bot.send_video(m.chat.id, open('/root/Git/roucouleBot/issou.mp4', 'rb'))
 
 bot.polling(none_stop = True)
