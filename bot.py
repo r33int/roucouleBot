@@ -54,4 +54,8 @@ def command_text(m):
 def command_video(m):
 	bot.send_video(m.chat.id, open('/root/Git/roucouleBot/issou.mp4', 'rb'))
 
+@bot.message_handler(func=lambda message: "jpp" in message.text.lower())
+def command_photo(m):
+	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/jpp.jpg', 'rb'))
+
 bot.polling(none_stop = True)
