@@ -50,4 +50,9 @@ def command_text(m):
 def command_text(m):
 	bot.send_message(m.chat.id, "Ouais en gros tu t'en blc...")
 
-bot.polling(none_stop=False, interval=0, timeout=20)
+@bot.message_handler(func=lambda message: "exit" in message.text.lower())
+def command_text(m):
+	video = open('issou.gif', 'rb')
+	bot.send_video(chat_id, video)
+
+bot.polling(none_stop = True)
