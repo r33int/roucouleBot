@@ -42,9 +42,9 @@ def command_text(m):
 def command_text(m):
 	bot.send_message(m.chat.id, "l")
 
-@bot.message_handler(func=lambda message: "el" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "d'avion")
+#@bot.message_handler(func=lambda message: "el" in message.text.lower())
+#def command_text(m):
+#	bot.send_message(m.chat.id, "d'avion")
 
 @bot.message_handler(func=lambda message: "sfr" in message.text.lower())
 def command_text(m):
@@ -67,3 +67,4 @@ def command_photo(m):
 	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/jpp.jpg', 'rb'))
 
 bot.polling(none_stop = True)
+Loop()
