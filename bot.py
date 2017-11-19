@@ -66,5 +66,5 @@ def command_video(m):
 def command_photo(m):
 	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/jpp.jpg', 'rb'))
 
-bot.polling(none_stop = True)
+bot.polling(none_stop=1, interval=0, timeout=100000)
 Loop()
