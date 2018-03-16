@@ -10,9 +10,9 @@ import logging
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 
-@bot.message_handler(func=lambda m: m.text.lower in 'nyo')
-def command_text(m):
-    bot.send_message(m.chat.id, "eh regardez ma télé 4k comment elle est belle")
+@bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
+def handle_test(message):
+    bot.send_message(message.chat.id, 'success')
 	
 @bot.message_handler(func=lambda message: "hifumin" in message.text.lower())
 def command_text(m):
