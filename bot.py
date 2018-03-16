@@ -29,7 +29,7 @@ def command_text(m):
 @bot.message_handler(func=lambda message: "jpp" in message.text.lower())
 def command_photo(m):
 	#Replace by image path
-	bot.send_photo(m.chat.id, open('~/Git/roucouleBot/jpp.jpg', 'rb'))
+	bot.send_photo(m.chat.id, open('/home/r33int/Git/roucouleBot/jpp.jpg', 'rb'))
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
 Loop()
