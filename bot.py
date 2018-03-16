@@ -61,7 +61,7 @@ def handle_test(message):
 	
 @bot.message_handler(func=lambda m: 'sfr' in m.text.lower())
 def handle_test(message):
-    bot.send_message(message.chat.id, 'Bonjour, votre demande concerne bien votre IBAN FR42904290489FE ?')
+    bot.send_message(message.chat.id, 'Bonjour, votre demande concerne bien votre IBAN FR42904290489FE ?') * 2
 
 @bot.message_handler(func=lambda m: "sdchachaze" in m.text.lower())
 def command_text(message):
