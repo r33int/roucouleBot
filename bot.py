@@ -24,12 +24,12 @@ def handle_test(message):
 
 @bot.message_handler(func=lambda m: "sdchachaze" in m.text.lower())
 def command_text(message):
-    bot.send_message(m.chat.id, "on voit au nom que c'est nul")
+    bot.send_message(message.chat.id, "on voit au nom que c'est nul")
 
 @bot.message_handler(func=lambda m: "jpp" in m.text.lower())
 def command_photo(message):
 	#Replace by image path
-	bot.send_photo(m.chat.id, open('/home/r33int/Git/roucouleBot/jpp.jpg', 'rb'))
+	bot.send_photo(message.chat.id, open('/home/r33int/Git/roucouleBot/jpp.jpg', 'rb'))
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
 Loop()
