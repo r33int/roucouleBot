@@ -14,56 +14,17 @@ telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 def command_text(m):
     bot.send_message(m.chat.id, "eh regardez ma télé 4k comment elle est belle")
 
-@bot.message_handler(func=lambda message: "achet" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "pigeon")
-
-@bot.message_handler(func=lambda message: "préco" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "pigeon")
-
-@bot.message_handler(func=lambda message: "preco" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "pigeon")
-
-@bot.message_handler(func=lambda message: "achèt" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "pigeon")
-
-@bot.message_handler(func=lambda message: "acha" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "pigeon")
-
-@bot.message_handler(func=lambda message: "tg" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "v")
-
-@bot.message_handler(func=lambda message: "pn" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "l")
-
-#@bot.message_handler(func=lambda message: "el" in message.text.lower())
-#def command_text(m):
-#	bot.send_message(m.chat.id, "d'avion")
-
 @bot.message_handler(func=lambda message: "sfr" in message.text.lower())
 def command_text(m):
-	bot.send_message(m.chat.id, "SLURP SFR NYO MEILLEUR 4G DE FRANCE OMG")
+    bot.send_message(m.chat.id, "Bonjour, votre demande concerne bien votre IBAN FR42904290489FE ?")
 
-@bot.message_handler(func=lambda message: "test" in message.text.lower())
+@bot.message_handler(func=lambda message: "sdchachaze" in message.text.lower())
 def command_text(m):
-	bot.send_message(m.chat.id, "reçu")
-
-@bot.message_handler(func=lambda message: "aok" in message.text.lower())
-def command_text(m):
-	bot.send_message(m.chat.id, "Ouais en gros tu t'en blc...")
-
-@bot.message_handler(func=lambda message: "exit" in message.text.lower())
-def command_video(m):
-	bot.send_video(m.chat.id, open('/root/Git/roucouleBot/issou.mp4', 'rb'))
+    bot.send_message(m.chat.id, "on voit au nom que c'est nul")
 
 @bot.message_handler(func=lambda message: "jpp" in message.text.lower())
 def command_photo(m):
+	#Replace by image path
 	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/jpp.jpg', 'rb'))
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
