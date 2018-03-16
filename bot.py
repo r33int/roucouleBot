@@ -10,9 +10,17 @@ import logging
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 
+@bot.message_handler(func=lambda message: "artv" in message.text.lower())
+def command_text(m):
+    bot.send_message(m.chat.id, "parle pas d'artv non xemles s'est pas fait "masse de tune" avec merci")
+
 @bot.message_handler(func=lambda message: "nyo" in message.text.lower())
 def command_text(m):
     bot.send_message(m.chat.id, "eh regardez ma télé 4k comment elle est belle")
+	
+@bot.message_handler(func=lambda message: "hifumin" in message.text.lower())
+def command_text(m):
+    bot.send_message(m.chat.id, "<3")
 
 @bot.message_handler(func=lambda message: "sfr" in message.text.lower())
 def command_text(m):
@@ -26,6 +34,11 @@ def command_text(m):
 def command_photo(m):
 	#Replace by image path
 	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/jpp.jpg', 'rb'))
+
+@bot.message_handler(func=lambda message: "aku" in message.text.lower())
+def command_photo(m):
+	#Replace by image path
+	bot.send_photo(m.chat.id, open('/root/Git/roucouleBot/aku.jpg', 'rb'))
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
 Loop()
