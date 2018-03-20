@@ -54,6 +54,18 @@ def handle_test(message):
 def command_text(message):
     bot.send_message(message.chat.id, "on voit au nom que c'est nul")
 
+@bot.message_handler(func=lambda m: "artv" in m.text.lower())
+def command_text(message):
+    bot.send_message(message.chat.id, "Y'a les flics chez moi wtf")
+
+@bot.message_handler(func=lambda m: "test" in m.text.lower())
+def command_text(message):
+    bot.send_message(message.chat.id, "reçu")
+
+@bot.message_handler(func=lambda m: "nenuit" in m.text.lower())
+def command_text(message):
+    bot.send_message(message.chat.id, "Bonne nuit !")
+
 @bot.message_handler(func=lambda m: "jpp" in m.text.lower())
 def command_photo(message):
 	#Replace by image path
