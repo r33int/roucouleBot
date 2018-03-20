@@ -13,9 +13,7 @@ telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 @bot.message_handler(commands=['clean'])
 def send_welcome(message):
     bot.send_message(message.chat.id, 'broken, do not use');
-
     
-    bot.send_message(message.chat.id, 'Chat nettoyé !')
 @bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
 def handle_test(message):
     bot.send_message(message.chat.id, 'eh regardez ma télé 4k comme elle est trop belle');
