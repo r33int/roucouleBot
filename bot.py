@@ -42,6 +42,10 @@ def command_text(message):
 def command_text(message):
     bot.send_message(message.chat.id, "Bonne nuit !");
 
+@bot.message_handler(func=lambda m: "ur mom gay" in m.text.lower())
+def command_text(message):
+    bot.send_message(message.chat.id, "no u");
+
 @bot.message_handler(func=lambda m: "tg" in m.text.lower())
 def command_text(message):
     bot.send_message(message.chat.id, "tg");
