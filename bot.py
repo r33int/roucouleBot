@@ -17,6 +17,10 @@ def send_welcome(message):
 @bot.message_handler(commands=['shrug'])
 def send_welcome(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
+    
+@bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
+def handle_test(message):
+    bot.send_message(message.chat.id, 'eh regardez ma télé 4k comme elle est trop belle');
 
 @bot.message_handler(func=lambda m: 'hifumin' in m.text.lower())
 def handle_test(message):
@@ -52,8 +56,8 @@ def command_text(message):
 
 @bot.message_handler(func=lambda m: "jpp" in m.text.lower())
 def command_photo(message):
-    #Replace by image path
-	bot.send_photo(message.chat.id, open('jpp.jpg', 'rb'));
+	#Replace by image path
+	bot.send_photo(message.chat.id, open('/home/r33int/Git/roucouleBot/jpp.jpg', 'rb'));
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
 Loop()
