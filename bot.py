@@ -18,10 +18,6 @@ def send_welcome(message):
 def send_welcome(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
 
-@bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
-def handle_test(message):
-    bot.send_message(message.chat.id, 'eh regardez ma télé 4k comme elle est trop belle');
-
 @bot.message_handler(func=lambda m: 'hifumin' in m.text.lower())
 def handle_test(message):
     bot.send_message(message.chat.id, '<3');
