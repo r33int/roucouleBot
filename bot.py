@@ -14,8 +14,8 @@ telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 def send_welcome(message):
     bot.send_message(message.chat.id, 'broken, do not use');
 
-@bot.message_handler(commands=['shrug'])
-def send_welcome(message):
+@bot.message_handler(func=lambda m: '/shrug' in m.text.lower())
+def handle_test(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
     
 @bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
