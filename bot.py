@@ -24,7 +24,7 @@ def send_welcome(message):
 def handle_test(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
 
-@bot.message_handler(func=lambda m: '/shrug2' in m.text.lower())
+@bot.message_handler(commands=['shurg'])
 def handle_test(message):
     bot.send_message(message.chat.id, '🤷');
     
