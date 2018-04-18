@@ -10,6 +10,12 @@ import logging
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO) # Outputs debug messages to console.
 
+@bot.message_handler(commands=['lozzyrire'])
+def send_welcome(message):
+	bot.send_voice(message.chat.id, open('/home/r33int/Git/roucouleBot/lozzy1.ogg', 'rb'));
+	bot.send_voice(message.chat.id, open('/home/r33int/Git/roucouleBot/lozzy2.ogg', 'rb'));
+	bot.send_voice(message.chat.id, open('/home/r33int/Git/roucouleBot/lozzy3.ogg', 'rb'));
+
 @bot.message_handler(commands=['clean'])
 def send_welcome(message):
     bot.send_message(message.chat.id, 'broken, do not use');
