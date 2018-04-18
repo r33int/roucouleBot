@@ -23,6 +23,10 @@ def send_welcome(message):
 @bot.message_handler(func=lambda m: '/shrug' in m.text.lower())
 def handle_test(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
+
+@bot.message_handler(func=lambda m: '/shrug2' in m.text.lower())
+def handle_test(message):
+    bot.send_message(message.chat.id, '🤷');
     
 @bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
 def handle_test(message):
