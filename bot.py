@@ -18,7 +18,7 @@ def send_welcome(message):
 def send_welcome(message):
     bot.send_message(message.chat.id, 'broken, do not use');
 
-@bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
+@bot.message_handler(func=lambda m: '/shrug' in m.text.lower())
 def send_welcome(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
 
