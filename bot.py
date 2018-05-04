@@ -18,14 +18,14 @@ def send_welcome(message):
 def send_welcome(message):
     bot.send_message(message.chat.id, 'broken, do not use');
 
-@bot.message_handler(func=lambda m: '/shrug' in m.text.lower())
-def handle_test(message):
+@bot.message_handler(commands=['shrug'])
+def send_welcome(message):
     bot.send_message(message.chat.id, '¯\_(ツ)_/¯');
 
-@bot.message_handler(func=lambda m: '/shurg' in m.text.lower())
-def handle_test(message):
-    bot.send_message(message.chat.id, '🤷');
-    
+@bot.message_handler(commands=['test'])
+def send_welcome(message):
+    bot.send_message(message.chat.id, "reçu");
+
 @bot.message_handler(func=lambda m: 'nyo' in m.text.lower())
 def handle_test(message):
     bot.send_message(message.chat.id, 'eh regardez ma télé 4k comme elle est trop belle');
@@ -45,10 +45,6 @@ def command_text(message):
 @bot.message_handler(func=lambda m: "artv" in m.text.lower())
 def command_text(message):
     bot.send_message(message.chat.id, "Y'a les flics chez moi wtf");
-
-@bot.message_handler(func=lambda m: "test" in m.text.lower())
-def command_text(message):
-    bot.send_message(message.chat.id, "reçu");
 
 @bot.message_handler(func=lambda m: "nenuit" in m.text.lower())
 def command_text(message):
