@@ -64,4 +64,3 @@ def command_photo(message):
 	bot.send_photo(message.chat.id, open('/home/r33int/Git/roucouleBot/jpp.jpg', 'rb'));
 
 bot.polling(none_stop=1, interval=0, timeout=100000)
-Loop()
